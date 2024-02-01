@@ -37,7 +37,7 @@ app.post('/api/TodoItems', (req, res) => {
 
     if (existingItem) {
         Object.assign(existingItem, newItem);
-        res.json(existingItem);
+        res.status(201).json(existingItem);
     } else {
         // Add a new item
         todoItems.push(newItem);
